@@ -19,7 +19,7 @@
                         targetLocation = $("a[name=" + targetHref.slice(1) + "]");
 
                     $('html, body').animate({
-                        scrollTop: targetLocation.offset().top
+                        scrollTop: targetLocation.offset().top-scope.offset
                     }, 1000);
 
                     return true;
