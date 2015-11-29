@@ -4,6 +4,10 @@
 
         return {
             restrict: 'A',
+            scope: {
+              duration: "@",
+              offset: "@"
+            },
             link: function (scope, element) {
                 console.log('[smoothScrol] init');
 
@@ -18,7 +22,7 @@
                         scrollTop: targetLocation.offset().top
                     }, 1000);
 
-                    return false;
+                    return true;
                 });
             }
         }
